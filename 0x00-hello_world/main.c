@@ -7,5 +7,7 @@
  */
 int main(void)
 {
+	printf("school is amazing\n");
+
     return (0);
 }
