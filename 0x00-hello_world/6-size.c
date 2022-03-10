@@ -1,6 +1,7 @@
 #include <stdio.h>
 /**
  * main - prints the zise of various types
+ * Description: Warnings are allowed
  * Return: 0 if exited properly, non-zero otherwise
  */
 int main(void)
