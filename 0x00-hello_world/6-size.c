@@ -2,7 +2,7 @@
 /**
  * main - prints the zise of various types
  * Description: Warnings are allowed
- * Return: Always 0 (Success)
+ * Return: Always 0 (Success), non-zero otherwise
  */
 int main(void)
 {
