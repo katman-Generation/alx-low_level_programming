@@ -2,6 +2,7 @@
 
 /**
  * main - check the code.
+ * Desciption: printing alphabetical laters
  *
  * Return: Always 0.
  */
