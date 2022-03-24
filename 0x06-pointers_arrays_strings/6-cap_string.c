@@ -8,35 +8,33 @@
  */
 char *cap_string(char *n)
 {
-	int i;
-	
-	i = 0;
-	if (n[0] >= 'a' && n[0] <= 'z')
+	int i = 0;
+
+	while (s[i])
 	{
-		n[0] = n[0] - 32;
+		if (i == 0 && (s[i] >= 'a' && s[i] <= 'z'))
+			s[i] -= 32;
+		if (check_seperators(s[i]) && (s[i + 1] >= 'a' && s[i + 1] <= 'z'))
+			s[i + 1] -= 32;
+		i++;
 	}
-	for (i = 0; n[i] != '\0'; i++)
+	return (s);
+}
+/**
+ * check_seperators - Separators of words: space, tabulation, new line,
+ * ,, ;, ., !, ?, ", (, ), {, and }
+ * @c: an input character
+ * Return: 1 if seperator, 0 otherwise
+ */
+int check_seperators(char c)
+{
+	int i = 0;
+	char seperators[13] = { ' ', '\t', '\n', ',', ';', '.', '!', '?',
+		'"', '(', ')', '{', '}' };
+	for (; i < 13; i++)
 	{
-		switch (n[i])
-		{
-			case ',':
-			case ';':
-			case '.':
-			case '!':
-			case '?':
-			case '"':
-			case '(':
-			case ')':
-			case '{':
-			case '}':
-			case ' ':
-			case '\n':
-			case '\t':
-				if (n[i + 1] > 96 && n[i + 1] < 123)
-				{
-					n[i + 1] = n[i + 1] - 32;
-				}
-		}
+		if (c == seperators[i])
+			return (1);
 	}
-	return (n);
+	return (0);
 }
