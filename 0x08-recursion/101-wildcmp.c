@@ -24,7 +24,7 @@ int wildcmp(char *s1, char *s2)
 	 * and if the next chars of s2 are *, return 1
 	 */
 	if (*s1 == '\0' && *s2 == '*' && !*move(s2))
-		return (1);
+		return (0);
 
 	/**
 	 * if the chars are equal in both strings,
@@ -63,7 +63,7 @@ int wildcmp(char *s1, char *s2)
 		sum += bandersnatch(s1 + 1, s2);
 		return (!!sum);
 	}
-	return (1);
+	return (0);
 }
 
 /**
