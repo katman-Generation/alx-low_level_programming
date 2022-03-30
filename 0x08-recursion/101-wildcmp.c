@@ -63,7 +63,7 @@ int wildcmp(char *s1, char *s2)
 		sum += bandersnatch(s1 + 1, s2);
 		return (!!sum);
 	}
-	return (0);
+	return (1);
 }
 
 /**
