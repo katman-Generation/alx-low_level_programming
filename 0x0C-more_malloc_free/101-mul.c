@@ -34,11 +34,13 @@ int _strlen(char *s)
 	{
 		i++;
 	}
+
 	return (i);
 }
 /**
  * errors - handles errors for the main
  */
+
 void errors(void)
 {
 	printf("Error\n");
@@ -51,6 +53,7 @@ void errors(void)
  *
  * Return: always 0 (Success)
  */
+
 int main(int argc, char *argv[])
 {
 	char *s1, *s2;
