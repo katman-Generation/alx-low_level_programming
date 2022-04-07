@@ -1,12 +1,11 @@
 #include "main.h"
 
 /**
- * *_memset - fills memory with a constant byte
- * @s: memory area to be filled
- * @b: char to copy
- * @n: number of times to copy b
+ * _calloc -allocated memoria for nmeb elemn de zise bytes
+ * @nmemb: number of element in the array
+ * @size: bytes for each position in array
  *
- * Return: pointer to the memory area s
+ * Return: pointer void
  */
 void *_calloc(unsigned int nmemb, unsigned int size)
 {
