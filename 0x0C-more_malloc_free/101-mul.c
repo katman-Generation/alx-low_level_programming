@@ -45,8 +45,8 @@ char *_initialize_array(char *ar, int lar)
 
 	for (i = 0; i < lar; i++)
 		ar[i] = '0';
-		ar[lar] = '\0';
-		return (ar);
+	ar[lar] = '\0';
+	return (ar);
 }
 /**
  * _checknum - determines length of the number
@@ -98,7 +98,7 @@ int main(int argc, char *argv[])
 				add = (nout[k] - '0') + addl;
 				if (add > 9)
 					nout[k - 1] = (add / 10) + '0';
-					nout[k] = (add % 10) + '0';
+				nout[k] = (add % 10) + '0';
 			}
 			i = ln1 - 1, j--, addl = 0, ca++, k = lnout - (1 + ca);
 		}
@@ -119,7 +119,3 @@ int main(int argc, char *argv[])
 	printf("%s\n", nout);
 	return (0);
 }
-
-
-
-	
