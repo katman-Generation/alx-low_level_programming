@@ -2,9 +2,9 @@
 #include <stdio.h>
 
 /**
- * print_number -print each number with separator, followed by a new line
+ * print_numbers - print each number with separator, followed by a new line
  * @separator: string to be printed between numbers
- * @n: number of args passed 
+ * @n: number of args passed
  */
 void print_numbers(const char *separator, const unsigned int n, ...)
 {
@@ -14,8 +14,8 @@ void print_numbers(const char *separator, const unsigned int n, ...)
 	va_start(num, n);
 	for (i = 0; i < n; i++)
 	{
-		printf("%d",va_arg(num, int));
-		if (i != (n-1) && separator != NULL)
+		printf("%d", va_arg(num, int));
+		if (i != (n - 1) && separator != NULL)
 			printf("%s", separator);
 	}
 	printf("\n");
