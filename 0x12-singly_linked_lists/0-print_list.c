@@ -11,7 +11,7 @@
 size_t print_list(const list_t *h)
 {
 	int p = 0;
-	const list_t *pon = h;
+	node *pon = h;
 
 	while (pon != NULL)
 	{
