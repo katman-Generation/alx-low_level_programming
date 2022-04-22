@@ -1,6 +1,6 @@
 #ifndef LISTS_H
 #define LISTS_H
-
+#include <stdlib.h>
 /**
  * struct list_s - defining linked list
  * @str: string - the string in the node

@@ -10,18 +10,18 @@
  */
 size_t print_list(const list_t *h)
 {
-	const list_t *pon = h;
-
-	int p;
-
-	if (pon == NULL)
-		printf(" [0] (nil)\n");
-
-	while (pon != NULL)
+	unsigned int p = 0;
+	
+	while (h)
 	{
-		printf(" [%d] $s \n", h->len, h->str);
-		pon = pon->next;
-		p++;
+		if (h->str == NULL)
+			printf("[0] (nil)\n");
+		else
+		{
+			printf(" [%u] $s \n", h->len, h->str);
+			h = h->next;
+			p++;
+		}
 	}
 	return (p);
 }
