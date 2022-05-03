@@ -24,17 +24,18 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	if (buf == NULL)
 		return (0);
 
-	s = read(fd, buf, letters);
-	if (s < 0)
+	t = read(fd, buf, letters);
+	if (t < 0)
 	{
 		free(buf);
 		return (0);
 	}
-	buf[s] = '\0';
+	buf[t] = '\0';
 
 	close(fd);
 
-	t = write(STDOUT_FILENO, buf, s);
+	n = write(STDOUT_FILENO, buf, t);
+
 	if (n < 0)
 	{
 		free(buf);
