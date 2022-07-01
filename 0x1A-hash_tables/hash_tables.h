@@ -48,22 +48,3 @@ int check_key(hash_node_t *ht, const char *key);
 hash_node_t *add_node(hash_node_t **head, const char *key, const char *value);
 void print_list(hash_node_t *h);
 void free_list(hash_node_t *head);
-
-/**
- * struct shash_node_s - node of a sorted hash table
- *
- * @key: The key, string
- * The key is unique in the hashTable
- * @value: The value corresponding to a key
- * @next: A pointer to the next node of the list
- * @sprev: A pointer to the previous element ot the sorted linked list
- * @snext: A pointer to the next element of the sorted linked list
- */
-typedef struct shash_node_s
-{
-	char *key;
-	char *value;
-	struct shash_node_s *next;
-	struct shash_node_s *sprev;
-	struct shash_node_s *snext;
-} Shash_node-t;
