@@ -58,6 +58,7 @@ int shash_table_set(shash_table_t *ht, const char *key, const char *value)
 void insert_sort(shash_node_t *node, shash_table_t *ht)
 {
 	shash_node_t *head = ht->shead;
+
 	if (!head || strcmp(node->key, head->key) < 0)
 	{
 		ht->shead = node;
@@ -95,7 +96,7 @@ char *shash_table_get(const shash_table_t *ht, const char *key)
 	shash_node_t *node = NULL;
 
 	if (!ht || !key || !strcmp(key, ""))
-		return(NULL);
+		return (NULL);
 
 	index = key_index((const unsigned char *)key, ht->size);
 	node = (ht->array)[index];
